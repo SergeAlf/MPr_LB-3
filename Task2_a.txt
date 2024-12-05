@@ -1,0 +1,42 @@
+a.	[easy] Протестувати функціональність веб-сервісу за допомогою Postman
+
+1. Тестування методу GET для всіх товарів
+http://127.0.0.1:8000/items
+Аутентифікація: Basic Auth
+Username: admin
+Password: password
+
+2. Тестування методу GET для товару за ID
+URL: http://127.0.0.1:8000/items/1 (де 1 — це ідентифікатор товару)
+Аутентифікація: Basic Auth
+Username: admin
+Password: password
+
+3. Тестування методу POST для додавання нового товару
+Аутентифікація: Basic Auth
+Username: admin
+Password: password
+Тіло запиту (приклад):
+{
+  "name": "Smartwatch",
+  "price": 250,
+  "quantity": 8
+}
+
+4. Тестування методу PUT для оновлення товару за вже існуючим ID
+URL: http://127.0.0.1:8000/items/1 (де 1 — це ID товару)
+Аутентифікація: Basic Auth
+Username: admin
+Password: password
+Тіло запиту (приклад):
+{
+  "name": "PC",
+  "price": 2500,
+  "quantity": 3
+}
+
+5. Тестування методу DELETE для видалення товару за ID
+URL: http://127.0.0.1:8000/items/1 (де 1 — це ID товару)
+Аутентифікація: Basic Auth
+Username: admin
+Password: password
